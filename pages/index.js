@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Home = () => {
   return (
     <div>
-      <p>Hello, Next.js!</p>
+      <p>Hello, FUCK Next.js!</p>
       <Link href="/Test">Go to Test page</Link>
       <p>Next link</p>
       <Link href="/Test2">Go to Test2 page</Link>
@@ -14,4 +14,3 @@ const Home = () => {
 };
 
 export default Home;
-

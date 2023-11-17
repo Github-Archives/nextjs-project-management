@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@tailwindcss/postcss7-compat": "^2.2.17",
     "next": "^14.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
