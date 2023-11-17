@@ -4,11 +4,10 @@ import Link from 'next/link';
 
 const Home = () => {
   return (
-    <div>
-      <p>Hello, FUCK Next.js!</p>
-      <Link href="/Test">Go to Test page</Link>
-      <p>Next link</p>
-      <Link href="/Test2">Go to Test2 page</Link>
+    <div className='flex border-black border-2'>
+      <div>Welcome!</div>
+      <Link href="/PageA" className='mx-6 underline text-blue-500'>Page A</Link>
+      <Link href="/PageB" className='mx-6 underline text-blue-500'>Page B</Link>
     </div>
   );
 };
