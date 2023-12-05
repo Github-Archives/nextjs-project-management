@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import getData from "./database";
+import getData from "../utils/database";
 
 const PageA = () => {
   const [databaseVersion, setDatabaseVersion] = useState("");
@@ -8,8 +8,7 @@ const PageA = () => {
     async function fetchData() {
       try {
         const response = await getData();
-        // console.log(`response:`, response);
-        const { version } = response[0]; // Extract the 'version' property
+        const { version } = response[0]; // Extract the 'version' property from response
         console.log(`Database Version:\n`, version);
         setDatabaseVersion(version);
       } catch (error) {
