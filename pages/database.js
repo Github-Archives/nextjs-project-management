@@ -5,11 +5,13 @@ async function getData() {
     `process.env.NEXT_PUBLIC_DATABASE_URL: ${process.env.NEXT_PUBLIC_DATABASE_URL}`,
   );
   const sql = neon(process.env.NEXT_PUBLIC_DATABASE_URL);
-  const response = await sql`SELECT version()`;
-  console.log(response);
-  return response;
+  try {
+    const response = await sql`SELECT version()`;
+    return response; // Explicitly return the response
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    throw error; // Rethrow the error for handling in PageA.js
+  }
 }
-export default async function Page() {
-  const data = await getData();
-  console.log(`data: ${data}`);
-}
+
+export default getData; // Export the function directly

@@ -8,7 +8,10 @@ const PageA = () => {
     async function fetchData() {
       try {
         const response = await getData();
-        setDatabaseVersion(response);
+        // console.log(`response:`, response);
+        const { version } = response[0]; // Extract the 'version' property
+        console.log(`Database Version:\n`, version);
+        setDatabaseVersion(version);
       } catch (error) {
         // Handle errors here
         console.error("Error fetching data:", error);
