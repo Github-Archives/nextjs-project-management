@@ -1,4 +1,3 @@
-// pages/PageB.js
 import React from "react";
 
 const PageB = () => {
