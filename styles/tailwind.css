@@ -1,5 +1,13 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 /* Add other custom global styles here */
+@layer base {
+  h1 {
+    @apply font-bold text-3xl;
+  }
+  a {
+    @apply underline font-bold;
+  }
+}
